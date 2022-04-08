@@ -9,26 +9,23 @@
 
 int main(void)
 {
-	int i, j;
+	int n, m;
 
-	for (i = 48; i < 58; i++)
+	for (n = 48; n <= 58; n++)
 	{
-		for (j = 48; j < 58; j++)
+		for (m= 49 ; m <= 57; m++)
 		{
-			if (i == j)
+			if (m > n)
 			{
-				continue;
-			}
-			putchar(i);
-			putchar(j);
-			if (i == 56 && j == 57)
+					putchar(n);
+					putchar(m);
+			if (n != 56 || m != 57)
 			{
-				break;
-			}
-			else
-			{
+
 				putchar(',');
 				putchar(' ');
+				
+				}
 			}
 		}
 	}
