@@ -1,30 +1,36 @@
 #include <stdio.h>
 
 /**
-* main - Print combinations of two digit numbers
-*
-* Return: Always 0 (Success)
-*/
+ * main - This program prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-  int tens;
-  int ones;
+	int a, b, c, d;
+	int i, j; /* counters */
 
-  for (tens = 0; tens <= 9; tens++)
-    {
-      for (ones = tens + 1; ones <= 9; ones++)
+	for (i = 0; i <= 99; i++)
 	{
-	  putchar(tens + '0');
-	  putchar(ones + '0');
+		for (j = i + 1; j <= 99; j++)
+		{
+			a = (i / 10) + '0';
+			b = (i % 10) + '0';
+			c = (j / 10) + '0';
+			d = (j % 10) + '0';
+			putchar(a);
+			putchar(b);
+			putchar(' ');
+			putchar(c);
+			putchar(d);
 
-	  if (tens < 8)
-	    {
-	      putchar(',');
-	      putchar(' ');
-	    }
+			if (i != 98)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
-    }
-  putchar('\n');
 
-  return (0);
+	putchar('\n');
+	return (0);
 }
