@@ -1,30 +1,38 @@
 #include <stdio.h>
 
 /**
-* main - Print combinations of two digit numbers
-*
-* Return: Always 0 (Success)
+ * main - prints a list of double didgits
+ *
+ * Description: digits should not be repeated twice
+ * Return: Always(0) Success
 */
+
 int main(void)
 {
-  int tens;
-  int ones;
+	int i, j;
 
-  for (tens = 0; tens <= 9; tens++)
-    {
-      for (ones = tens + 1; ones <= 9; ones++)
+	for (i = 48; i < 58; i++)
 	{
-	  putchar(tens + '0');
-	  putchar(ones + '0');
-
-	  if (tens < 8)
-	    {
-	      putchar(',');
-	      putchar(' ');
-	    }
+		for (j = 48; j < 58; j++)
+		{
+			if (i == j)
+			{
+				continue;
+			}
+			putchar(i);
+			putchar(j);
+			if (i == 56 && j == 57)
+			{
+				break;
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
-    }
-  putchar('\n');
+	putchar('\n');
 
-  return (0);
+	return (0);
 }
