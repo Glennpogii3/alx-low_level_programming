@@ -7,17 +7,19 @@
 */
 int main(void)
 {
-  int tens;
-  int ones;
+  int i;
+  int j;
 
-  for (tens = 0; tens <= 9; tens++)
-    {
-      for (ones = tens + 1; ones <= 9; ones++)
+	for (i = 0;  i<= 99; i++)
 	{
-	  putchar(tens + '0');
-	  putchar(ones + '0');
-
-	  if (tens < 8)
+        for(int i = j + 1;  i < 100 ; i++)
+	{    
+	     putchar((i/10)+'0');
+    	 putchar((i/10)+'0');
+         putchar((i%10)+'0');
+    
+  
+	   if (j < 99)
 	    {
 	      putchar(',');
 	      putchar(' ');
